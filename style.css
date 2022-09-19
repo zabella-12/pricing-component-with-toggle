@@ -44,8 +44,11 @@ main p {
 
 main h1 {
     font-size: 40px;
-    padding: 15px;
-    
+    padding: 15px;  
+}
+
+main .basic h1, .master h1 {
+    color: var(--darkGrayishBlue);
 }
 
 .coin {
