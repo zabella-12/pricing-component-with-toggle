@@ -12,6 +12,7 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--veryLightGrayishBlue);
     text-align:  center;
@@ -45,6 +46,11 @@ main p {
 main h1 {
     font-size: 40px;
     padding: 15px;  
+}
+
+main h2 {
+    font-size: 18px;
+    padding: 15px;
 }
 
 main .basic h1, .master h1 {
@@ -123,9 +129,9 @@ button:hover{
 .professional {
     justify-content: center;
     height: 390px;
+    width: 280px;
     display: flex;
     flex-direction: column;
-    width: 280px;
     background: var(--degrade);
     color: var(--veryLightGrayishBlue);
     border-radius: 5px;
