@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --degrade:linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --veryLightGrayishBlue: hsl(240, 78%, 98%);
+    --lightGrayishBlue: hsl(234, 14%, 74%);
+    --grayishBlue: hsl(233, 13%, 49%);
+    --darkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--veryLightGrayishBlue);
+    text-align:  center;
+    color: var(--grayishBlue);
+    font-size: 18px ;  
+    background-image: url(images/bg-bottom.svg),url(images/bg-top.svg);  
+    background-repeat: no-repeat;
+    background-position: left bottom, right top; 
+}
+
+header h1 {
+margin: 2%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
+    align-items: center;
+    position: relative;
+}
+
+main p {
+    display: inline-block;
+    width: 80%;
+    padding: 15px;
+    margin: 0px auto;
+    border-top: 1px solid var(--lightGrayishBlue);
+}
+
+main h1 {
+    font-size: 40px;
+    padding: 15px;
+    
+}
+
+.coin {
+    font-size: 30px;
+    margin: auto 5px;
+}
+
+.line-bottom {
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    margin-bottom: 10%;
+}
+
+.professional .line-bottom {
+    border-bottom: 1px solid var(--veryLightGrayishBlue);
+    margin-bottom: 10%;
+}
+
+.basic, .master{
+    justify-content: center;
+    height: 352px;
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 6px 10px;
+    padding: 1rem;
+    background: var(--veryLightGrayishBlue);
+}
+
+.basic {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.master {
+    border-radius: 0px 5px 5px 0px;;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+button:hover{
+    cursor: pointer;
+    transition: 1s;
+}
+
+.basic button, .master button {
+    background: var(--degrade);
+    color: var(--veryLightGrayishBlue);
+}
+
+.basic button:hover, .master button:hover {
+    background: var(--veryLightGrayishBlue);
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);
+}
+
+.professional button {
+    background: var(--veryLightGrayishBlue);
+    color: hsl(237, 63%, 64%);
+}
+
+.professional button:hover {
+    background: hsl(237, 63%, 64%);
+    color: white;
+    border: 1px solid var(--veryLightGrayishBlue);
+}
+
+.professional {
+    justify-content: center;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background: var(--degrade);
+    color: var(--veryLightGrayishBlue);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.professional p {
+    border-top: 1px solid var(--veryLightGrayishBlue);
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+.toggle {
+    display: flex;
+   justify-content: center;
+   gap: 30px;
+   align-items: center;
+   color: var(--lightGrayishBlue);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--degrade);
+    transition: .4s;
+  }
+
+  .slider:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+    
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+
+    body {
+        background-image: none;
+    }
+
+   main{
+    flex-direction: column;
+    gap: 30px;
+    margin: 20% auto;
+   }
+
+   header h1 {
+    margin: 10%;
+    }
+
+   .basic, .professional, .master {
+    border-radius: 5px;
+   }
+    .professional{
+    height: 352px;
+    width: 255px;
+    box-shadow: 2px 6px 10px;
+}
+  }
