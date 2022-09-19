@@ -4,7 +4,6 @@ let planValuesMonth = document.querySelectorAll('.month')
 
 for (let i = 0; i < planValuesAnually.length; i++) {
     planValuesMonth[i].style.display = "none"
-    planValuesAnually[i].style.display = "inline-block"
 }
 
 check.addEventListener('change', function () {
